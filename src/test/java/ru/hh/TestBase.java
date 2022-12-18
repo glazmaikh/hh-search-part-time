@@ -9,15 +9,13 @@ import org.junit.jupiter.api.BeforeEach;
 public class TestBase {
     @BeforeAll
     static void setUp() {
-        System.setProperty("webdriver.chrome.driver", "C://webdrivers/chromedriver.exe");
-        Configuration.browserSize = "1932x1160";
         Configuration.baseUrl = "https://hh.ru";
-
-        //Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.browserSize = "1932x1160";
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
     }
 
     @BeforeEach
     void beforeEach() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 }
