@@ -45,6 +45,12 @@ tasks.withType(Test) {
     }
 }
 
+task advanced_search_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags("advanced_search_tests")
+    }
+}
+
 help {
     doFirst {
         println "********************************************"
