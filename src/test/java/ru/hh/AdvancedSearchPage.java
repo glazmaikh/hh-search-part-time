@@ -2,6 +2,7 @@ package ru.hh;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -17,6 +18,7 @@ public class AdvancedSearchPage extends TestBase {
     SelenideElement employmentFindDiv = $(".novafilters");
     ElementsCollection count = $$(".serp-item");
 
+    @DisplayName("Part-time search test")
     @Test
     void createPartTimeSearchTest() {
         step("Open Advanced Search page", () -> {
